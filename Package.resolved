@@ -6,7 +6,7 @@
       "location" : "https://github.com/Fleuronic/Caesura",
       "state" : {
         "branch" : "main",
-        "revision" : "e993bcf383d45462aff87096c3aba207bf9a9e6f"
+        "revision" : "f0d791370930959fa9320de1d42dba77b73c95ed"
       }
     },
     {
@@ -28,12 +28,39 @@
       }
     },
     {
+      "identity" : "catenoid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Catenoid",
+      "state" : {
+        "branch" : "main",
+        "revision" : "acf392cae2cb0cdb517d4912dbed7a7549f2e7d8"
+      }
+    },
+    {
+      "identity" : "collectionconcurrencykit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnSundell/CollectionConcurrencyKit.git",
+      "state" : {
+        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "diesel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Fleuronic/Diesel",
+      "state" : {
+        "branch" : "main",
+        "revision" : "bff364c2ab8a29e56607d10fb81933ac0ed42ed3"
+      }
+    },
+    {
       "identity" : "dieselservice",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Fleuronic/DieselService",
       "state" : {
         "branch" : "main",
-        "revision" : "ad300416d25f4f2946e28f48a286ff8d12d25867"
+        "revision" : "e6bdb04af9f32aaf1aec1da3649cf186f539cf76"
       }
     },
     {
