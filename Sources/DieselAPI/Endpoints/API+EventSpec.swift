@@ -32,12 +32,3 @@ extension API: EventSpec {
         return
     }
 }
-
-import Foundation
-
-private func timeFormatter(timeZone: TimeZone) -> DateFormatter {
-	let formatter = DateFormatter()
-	formatter.dateFormat = "h:mm a"
-	formatter.timeZone = timeZone
-	return formatter
-}
