@@ -8,15 +8,15 @@ import protocol DieselService.EventSpec
 import protocol Catenary.API
 
 extension API: EventSpec {
-    public func listEvents(for year: Int) -> AsyncStream<Self.Result<[EventListFields]>> {
-        .init {
+	public func listEvents(for year: Int) -> AsyncStream<Self.Result<[EventListFields]>> {
+		.init {
 			await fetch(EventListFields.self).map {
 				$0.sorted {
 					($0.date, $0.city) < ($1.date, $1.city)
 				}
 			}
-        }
-    }
+		}
+	}
 
 	public func fetchEventDetails(with id: Event.ID) -> AsyncStream<Self.Result<EventDetailsFields?>> {
 		.init {
@@ -24,11 +24,11 @@ extension API: EventSpec {
 		}
 	}
 
-    public func storeEvents(from _: Void, for year: Int) async -> Self.Result<[EventBaseFields]> {
-        await fetch(EventBaseFields.self)
-    }
-    
-    public func deleteEvents(for year: Int) async {
-        return
-    }
+	public func storeEvents(from _: Void, for year: Int) async -> Self.Result<[EventBaseFields]> {
+		await fetch(EventBaseFields.self)
+	}
+
+	public func deleteEvents(for year: Int) async {
+		return
+	}
 }

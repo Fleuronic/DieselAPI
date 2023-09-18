@@ -5,7 +5,7 @@ import protocol DieselService.LocationSpec
 import protocol Catenary.API
 
 extension API: LocationSpec {
-    public func storeLocations(from list: Void) async -> Self.Result<[LocationBaseFields]> {
-        await fetch(LocationBaseFields.self)
-    }
+	public func storeLocations(from list: Void) async -> Self.Result<[LocationBaseFields]> {
+		await fetch(LocationBaseFields.self)
+	}
 }
