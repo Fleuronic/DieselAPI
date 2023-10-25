@@ -15,7 +15,7 @@
       "location" : "https://github.com/Fleuronic/Catena",
       "state" : {
         "branch" : "main",
-        "revision" : "ef685764ba13c9da00c6bb0a0089babaa7f9ecd2"
+        "revision" : "66a8a518270ec6207e467119e10791319f32fcc2"
       }
     },
     {
@@ -51,7 +51,7 @@
       "location" : "https://github.com/Fleuronic/Diesel",
       "state" : {
         "branch" : "main",
-        "revision" : "c9a3f4ff476d9f7bb5f5ea552164513d23478cac"
+        "revision" : "8ab9ac1053b1a5510cb09838b771bd0f3c698740"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/Fleuronic/DieselService",
       "state" : {
         "branch" : "main",
-        "revision" : "726730ed879a7a92d3c0883b4698f8e43676fcda"
+        "revision" : "aa499faad81ed229d6e7bcbf3ab550ce33615e65"
       }
     },
     {
