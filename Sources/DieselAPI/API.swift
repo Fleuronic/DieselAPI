@@ -1,16 +1,32 @@
 // Copyright © Fleuronic LLC. All rights reserved.
 
 import enum Catenary.Request
+import struct Catena.IDFields
+import struct Diesel.Event
+import struct Diesel.Slot
 import struct Foundation.URL
 import class Foundation.JSONDecoder
 import class Foundation.DateFormatter
 import protocol Catenary.API
 import protocol Caesura.HasuraAPI
+import protocol DieselService.EventFields
+import protocol DieselService.SlotFields
 
-public struct API {
-	let apiKey: String
+public struct API<
+	EventListFields: EventFields,
+	EventDetailsFields: EventFields,
+	SlotListFields: SlotFields
+> {
+	private let apiKey: String
+}
 
-	public init(apiKey: String) {
+public extension API {
+	init(
+		apiKey: String,
+		eventListFields: EventListFields.Type = IDFields<Event.Identified>.self,
+		eventDetailsFields: EventDetailsFields.Type = IDFields<Event.Identified>.self,
+		slotListFields: SlotListFields.Type = IDFields<Slot.Identified>.self
+	) {
 		self.apiKey = apiKey
 	}
 }

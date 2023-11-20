@@ -2,7 +2,6 @@
 
 import struct Diesel.Event
 import struct Diesel.Slot
-import struct DieselService.SlotListFields
 import protocol DieselService.SlotSpec
 import protocol Catenary.API
 

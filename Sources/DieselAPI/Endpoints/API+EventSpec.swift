@@ -2,8 +2,6 @@
 
 import struct Diesel.Event
 import struct DieselService.EventBaseFields
-import struct DieselService.EventListFields
-import struct DieselService.EventDetailsFields
 import protocol DieselService.EventSpec
 import protocol Catenary.API
 
