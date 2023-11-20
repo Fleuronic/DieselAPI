@@ -51,7 +51,7 @@
       "location" : "https://github.com/Fleuronic/Diesel",
       "state" : {
         "branch" : "main",
-        "revision" : "0ed03d382ab9ea5fb5894177971792c50144403d"
+        "revision" : "a78523511f8e40a30642ba47170f7738ba7a882a"
       }
     },
     {
@@ -60,7 +60,7 @@
       "location" : "https://github.com/Fleuronic/DieselService",
       "state" : {
         "branch" : "main",
-        "revision" : "3127ec5e2843d9ec32c62f6ae5b70ff5f3a2b412"
+        "revision" : "5ca0752621a1960ee5def7e8e860c36ee91dc1e7"
       }
     },
     {
