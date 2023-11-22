@@ -5,8 +5,10 @@ import struct Catena.IDFields
 import struct Diesel.Event
 import struct Diesel.Slot
 import struct Foundation.URL
+import struct Foundation.Date
 import class Foundation.JSONDecoder
 import class Foundation.DateFormatter
+import class Foundation.ISO8601DateFormatter
 import protocol Catenary.API
 import protocol Caesura.HasuraAPI
 import protocol DieselService.EventFields
@@ -18,6 +20,8 @@ public struct API<
 	SlotListFields: SlotFields
 > {
 	private let apiKey: String
+	private let dateFormatter: DateFormatter
+	private let timeFormatter: ISO8601DateFormatter
 }
 
 public extension API {
@@ -28,6 +32,10 @@ public extension API {
 		slotListFields: SlotListFields.Type = IDFields<Slot.Identified>.self
 	) {
 		self.apiKey = apiKey
+
+		dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = "YYYY-MM-dd"
+		timeFormatter = ISO8601DateFormatter()
 	}
 }
 
@@ -48,14 +56,11 @@ extension API: HasuraAPI {
 	public var decoder: JSONDecoder {
 		let decoder = JSONDecoder()
 		decoder.keyDecodingStrategy = .convertFromSnakeCase
-		decoder.dateDecodingStrategy = .formatted(dateFormatter)
+		decoder.dateDecodingStrategy = .custom { decoder -> Date in
+			let container = try decoder.singleValueContainer()
+			let dateString = try container.decode(String.self)
+			return dateFormatter.date(from: dateString) ?? timeFormatter.date(from: dateString)!
+		}
 		return decoder
 	}
 }
-
-// MARK: -
-private let dateFormatter = {
-	let formatter = DateFormatter()
-	formatter.dateFormat = "YYYY-MM-dd"
-	return formatter
-}()
