@@ -7,18 +7,14 @@ import protocol Catenary.API
 
 extension API: EventSpec {
 	public func listEvents(for year: Int) -> AsyncStream<Self.Result<[EventListFields]>> {
-		.init {
-			await fetch(EventListFields.self, where: Event.takesPlace(in: year))
-		}
+		.init { await fetch(EventListFields.self, where: Event.takesPlace(in: year)) }
 	}
 
 	public func fetchEventDetails(with id: Event.ID) -> AsyncStream<Self.Result<EventDetailsFields?>> {
-		.init {
-			await fetch(EventDetailsFields.self, with: id)
-		}
+		.init { await fetch(EventDetailsFields.self, with: id) }
 	}
 
-	public func storeEvents(from _: Void, for year: Int) async -> Self.Result<[EventBaseFields]> {
+	public func storeEvents(from list: Void, for year: Int) async -> Self.Result<[EventBaseFields]> {
 		await fetch(EventBaseFields.self)
 	}
 
