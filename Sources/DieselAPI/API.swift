@@ -11,6 +11,7 @@ import class Foundation.DateFormatter
 import class Foundation.ISO8601DateFormatter
 import protocol Catenary.API
 import protocol Caesura.HasuraAPI
+import protocol Schemata.ModelValue
 import protocol DieselService.EventFields
 import protocol DieselService.SlotFields
 
